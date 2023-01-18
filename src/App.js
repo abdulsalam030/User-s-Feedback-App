@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Headers from "./components/Headers";
-import Feedbackitem from "./components/Feedbackitem";
+import Feedbacklist from "./components/Feedbacklist";
 import FeedbackData from './Data/FeedbackData'
 import "./App.css";
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Headers />
       <div className="container">
-      <Feedbackitem/>
+      <Feedbacklist feedback = {feedback} />
       </div>
     </>
   );
