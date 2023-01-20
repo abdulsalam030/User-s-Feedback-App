@@ -1,7 +1,7 @@
 function Headers({text}) {
   const styles = {
     backgroundColor : 'rgba(0,0,0,0.4)' ,
-    color : '#ff6a95'
+    color : '#ff6a95',
   }
   return (
     <header style={styles}>
