@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button';
+import Rating from './Rating';
 
 function Form() {
     const [text,setText] = useState("");
     const [btnDisabled, setBtnDisabled] = useState(true);
+    const [rating,setRating] = useState(10);
     const [message,setMessage] = useState(" ");
 
     const handleText = (e) => {
@@ -17,11 +19,7 @@ function Form() {
         } else {
             setMessage(null)
             setBtnDisabled(false)
-
         }
-
-
-
         setText(e.target.value)
 
     }
@@ -31,9 +29,10 @@ function Form() {
             <h2>
                 How would you Rate our Services
             </h2>
+            <Rating select = {(rating) => setRating(rating) } />
             <div className='input-group'>
                 <input type="text" placeholder="Write a review for us" onChange={handleText} value={text} />
-                 <Button type='submit' isDisabled={btnDisabled}   >Send</Button> 
+                 <Button type='submit' isDisabled={btnDisabled}>Send</Button> 
             </div>
             {message && <div className='message'>{message}</div>}
         </form>
