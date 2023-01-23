@@ -5,8 +5,8 @@ function Rating({select}) {
 
     
     const handleChange = (e) => {
-        setSelected(e.target.value)
-        select(e.target.value)
+        setSelected(+e.target.value)
+        select(+e.target.value)
 
     }
 
