@@ -8,6 +8,8 @@ function Rating({select}) {
         setSelected(+e.target.value)
         select(+e.target.value)
 
+      
+
     }
 
   return (
