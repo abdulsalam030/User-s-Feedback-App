@@ -57,7 +57,6 @@ function Form() {
             }
 
             
-            addFeedback(newFeedback);
             setText('');
 
         }
